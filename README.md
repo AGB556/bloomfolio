@@ -77,12 +77,12 @@ All site configuration is centralized in `src/config.ts`. Edit this file to cust
 
 ```typescript
 export const siteConfig: SiteConfig = {
-  name: "Your Name",
-  title: "Your Professional Title",
+  name: "Brendan Conover",
+  title: "Maker and Engineer",
   description: "Brief description of your portfolio",
   avatar: "../assets/your-avatar.png",
-  location: "Your City, Country",
-  email: "your@email.com",
+  location: "Boston, MA",
+  email: "bj.conover556@gmail.com",
   // ...
 };
 ```
@@ -93,13 +93,11 @@ Add your social media profiles:
 
 ```typescript
 socialLinks: {
-  github: "https://github.com/username",
-  linkedin: "https://linkedin.com/in/username",
-  twitter: "https://twitter.com/username",
-  bluesky: "https://bsky.app/profile/username",
-  instagram: "https://instagram.com/username",
-  youTube: "https://youtube.com/@username",
-  codetips: "https://codetips.cloud/u/username",
+  github: "https://github.com/AGB556",
+  linkedin: "https://www.linkedin.com/in/brendan-conover-0b4b51310/",
+  /*instagram: "https://instagram.com/username",*/
+  youTube: "https://www.youtube.com/@the-third-dimension-1",
+  
 }
 ```
 
@@ -111,7 +109,7 @@ Control which sections appear on your homepage:
 sections: {
   about: true,      // About section
   projects: true,   // Projects showcase
-  blog: true,       // Latest blog posts (shows 3 most recent)
+  blog: false,       // Latest blog posts (shows 3 most recent)
   work: true,       // Work experience timeline
   education: true,  // Education history
   hackathons: true, // Hackathon participation
