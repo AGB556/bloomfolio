@@ -28,20 +28,20 @@ Edit `src/pages/index.astro` to update your personal information:
 
 ```javascript
 const portfolioData = {
-  name: "Your Name",
-  title: "Your Title",
-  description: "Your description",
+  name: "Brendan Conover",
+  title: "Maker and Engineer",
+  description: "Creating innovative solutions to existing problems",
   avatarUrl: "/avatar.png",
   location: "Your Location",
-  email: "your.email@example.com",
+  email: "bj.conover556@gmail.com",
   socialLinks: {
-    github: "https://github.com/yourusername",
-    linkedin: "https://linkedin.com/in/yourusername",
-    twitter: "https://twitter.com/yourusername",
+    github: "https://github.com/AGB556",
+    linkedin: "https://www.linkedin.com/in/brendan-conover-0b4b51310/",
+    /*twitter: "https://twitter.com/yourusername",*/
   },
   about: {
     title: "About Me",
-    description: "Your about text",
+    description: "I've always loved making things with my own hands. The ability to solve problems with nothing but my own ingenuity calls to me. I use my ever growing list of skills to create.",
   },
 };
 ```

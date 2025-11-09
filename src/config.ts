@@ -95,17 +95,20 @@ export interface SiteConfig {
  * Update these values to customize your portfolio
  */
 export const siteConfig: SiteConfig = {
-  name: "Brendan",
+  name: "Brendan Conover",
   title: "Maker and Engineer",
   description:
-    "Creating innovative solutions to complex problems",
-  avatar: "../assets/bloomfolio.png",
+    "Creating innovative solutions to complex problems. Maker, leader, aspiring Mechanical Engineer at Northeastern University",
+  avatar: "C:/Users/bcono/bloomfolio/src/assets/conover_brendan(1).jpg",
   location: "Boston, MA, USA",
   email: "bj.conover556@gmail.com",
   socialLinks: {
     github: "https://github.com/AGB556",
     linkedin: "https://www.linkedin.com/in/brendan-conover-0b4b51310/",
-    instagram: "https://instagram.com/lauroguedes.dev",
+    // Use mailto so the Hero action opens the user's email client.
+    // Multiple recipients are comma-separated.
+    twitter: "mailto:bj.conover556@gmail.com,conover.b@northeastern.edu",
+    //instagram: "https://instagram.com/lauroguedes.dev",
     youTube: "https://www.youtube.com/@the-third-dimension-1",
     
   },
@@ -136,12 +139,12 @@ export const siteConfig: SiteConfig = {
     ],
   },
   sections: {
-    about: true,
+    about: false,
     projects: true,
     blog: false,
     work: true,
     education: true,
-    hackathons: true,
+    hackathons: false,
     contact: true,
   },
 };

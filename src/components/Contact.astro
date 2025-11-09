@@ -1,25 +1,24 @@
 ---
 import { MessageCircleCode, Pickaxe } from "@lucide/astro";
+import { siteConfig } from "../config";
 ---
 
 <footer class="footer footer-horizontal footer-center bg-base-200 py-10">
   <aside>
     <MessageCircleCode class="inline-block size-20" />
     <p class="max-w-xl m-auto text-lg">
-      Want to chat? shoot me a dm <a
-        href="https://x.com/leowg"
-        target="_blank"
-        class="link link-hover text-primary"
-        >with a direct question on X (twitter)</a
-      > and I'll respond whenever I can.
+      Want to chat? To email, reach me at
+      <a
+        href={`mailto:${siteConfig.email}`}
+        class="link link-hover text-primary ml-1"
+      >
+        {siteConfig.email}
+      </a>
+      and I'll respond whenever I can.
     </p>
     <p class="text-base-content/60">
-      Copyright © {new Date().getFullYear()} - Crafted by an Artisan <a
-        class="link"
-        href="https://lauroguedes.dev"
-        target="_blank"
-        ><Pickaxe class="size-3 inline-block mr-1" />Lauro Guedes</a
-      >
+      Copyright © {new Date().getFullYear()}
+      
     </p>
   </aside>
 </footer>
