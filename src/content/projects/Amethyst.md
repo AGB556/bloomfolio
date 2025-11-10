@@ -4,7 +4,7 @@ description: "A fully custom mechanical keyboard, designed from scratch with KiC
 image: "https://api.dicebear.com/9.x/glass/svg?seed=Brooklynn"
 startDate: "2023-07-01"
 endDate: "2024-06-30"
-skills: ["PCB Design (KiCad)", "CAD (Onshape)", "Electronics and Software Integration", "Soldering", "3D-Printing"]
+skills: ["PCB Design (KiCad)", "CAD (Onshape)", "Electronics + Software Integration", "Soldering", "3D-Printing"]
 sourceLink: "https://github.com/AGB556/Polished-Amethyst"
 ---
 
