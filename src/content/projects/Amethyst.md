@@ -1,11 +1,11 @@
 ---
-title: "Screencial"
-description: "A web application enabling users to generate personalized, shareable screenshots for social media with customizable templates and design elements."
+title: "Amethyst"
+description: "A fully custom mechanical keyboard, designed from scratch with KiCad and Onshape"
 image: "https://api.dicebear.com/9.x/glass/svg?seed=Brooklynn"
 startDate: "2023-07-01"
-endDate: "2024-06-31"
-skills: ["Laravel", "Livewire", "Stripe", "Tailwind CSS"]
-demoLink: "https://screencial.art"
+endDate: "2024-06-30"
+skills: ["PCB Design (KiCad)", "CAD (Onshape)", "Electronics and Software Integration", "Soldering", "3D-Printing"]
+sourceLink: "https://github.com/AGB556/Polished-Amethyst"
 ---
 
 ## Overview
