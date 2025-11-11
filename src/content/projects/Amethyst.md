@@ -1,7 +1,7 @@
 ---
 title: "Amethyst"
 description: "A fully custom mechanical keyboard, designed from scratch with KiCad and Onshape"
-image: "https://api.dicebear.com/9.x/glass/svg?seed=Brooklynn"
+image: "/images/projects/Amethyst/1000014599.jpg"
 startDate: "2023-07-01"
 endDate: "2024-06-30"
 skills: ["PCB Design (KiCad)", "CAD (Onshape)", "Electronics + Software Integration", "Soldering", "3D-Printing"]

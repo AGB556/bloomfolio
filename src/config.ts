@@ -76,6 +76,8 @@ export interface SiteConfig {
   description: string;
   /** Path to avatar/logo image */
   avatar: string;
+  /** Optional link to a resume or CV (external URL) */
+  resume?: string;
   /** Location/City */
   location: string;
   /** Contact email */
@@ -102,6 +104,7 @@ export const siteConfig: SiteConfig = {
   avatar: "C:/Users/bcono/bloomfolio/src/assets/conover_brendan(1).jpg",
   location: "Boston, MA, USA",
   email: "bj.conover556@gmail.com",
+  resume: "https://drive.google.com/file/d/1nnYYnUpTmhMNazgE-BjdAMeCk6e0YDSH/view?usp=sharing",
   socialLinks: {
     github: "https://github.com/AGB556",
     linkedin: "https://www.linkedin.com/in/brendan-conover-0b4b51310/",
@@ -110,7 +113,6 @@ export const siteConfig: SiteConfig = {
     twitter: "mailto:bj.conover556@gmail.com,conover.b@northeastern.edu",
     //instagram: "https://instagram.com/lauroguedes.dev",
     youTube: "https://www.youtube.com/@the-third-dimension-1",
-    
   },
   enableThemeSelector: true,
   extraLinks: {
