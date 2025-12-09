@@ -30,10 +30,10 @@ const education = defineCollection({
 // Projects collection
 const projects = defineCollection({
   loader: glob({ pattern: "**/*.md", base: "./src/content/projects" }),
-  schema: ({ image }) => z.object({
+  schema: z.object({
     title: z.string(),
     description: z.string(),
-    image: image(),
+    image: z.string(),
     startDate: z.coerce.date(),
     endDate: z.coerce.date().optional(),
     skills: z.array(z.string()),
@@ -59,10 +59,10 @@ const hackathons = defineCollection({
 // Blog collection
 const blog = defineCollection({
   loader: glob({ pattern: "**/*.{md,mdx}", base: "./src/content/blog" }),
-  schema: ({ image }) => z.object({
+  schema: z.object({
     title: z.string(),
     description: z.string(),
-    image: image(),
+    image: z.string(),
     publishDate: z.coerce.date(),
     updatedDate: z.coerce.date().optional(),
     tags: z.array(z.string()).optional(),

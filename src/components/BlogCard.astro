@@ -1,5 +1,4 @@
 ---
-import { Image } from "astro:assets";
 import type { CollectionEntry } from "astro:content";
 
 interface Props {
@@ -20,7 +19,7 @@ function formatDate(date: Date) {
 
 <div class="card image-full shadow-xl hover:shadow-2xl transition-shadow">
   <figure class="aspect-video">
-    <Image src={post.data.image} alt={post.data.title} />
+    <img src={post.data.image} alt={post.data.title} class="w-full h-full object-cover" />
   </figure>
   <div
     class="card-body rounded-lg justify-end bg-linear-to-b from-primary/80 to-transparent"

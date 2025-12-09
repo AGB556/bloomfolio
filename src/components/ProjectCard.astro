@@ -1,5 +1,4 @@
 ---
-import { Image } from "astro:assets";
 import SkillBadge from "./SkillBadge.astro";
 import { ExternalLink, Eye } from "@lucide/astro";
 import type { CollectionEntry } from "astro:content";
@@ -26,12 +25,10 @@ function formatPeriod(startDate: Date, endDate?: Date) {
 <article class="card bg-base-100 shadow-xl hover:shadow-2xl transition-shadow">
   <a href={`/projects/${project.id}`}>
     <figure class="aspect-video">
-      <Image
+      <img
         src={project.data.image}
         alt={project.data.title}
         class="w-full h-full object-cover"
-        width={600}
-        height={400}
       />
     </figure>
   </a>
