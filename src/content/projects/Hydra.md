@@ -1,7 +1,7 @@
 ---
 title: "Hydra"
 description: "Custom 5 head toolchanger 3D-Printer - Fully custom tool changing mechanism integrated with COTS printer parts"
-image: "/images/projects/Hydra/20250807_222804.jpg"
+#image: "C:/Users/bcono/bloomfolio/public/images/projects/Hydra/20250807_222804.jpg"
 startDate: "2024-12-07"
 skills: ["CAD (Onshape)", "Mechanical Design + Integration", "Electronics + Software Integration", "Klipper", "3D-Printing", "Manual Machining"]
 sourceLink: "https://github.com/AGB556/Hydra"
