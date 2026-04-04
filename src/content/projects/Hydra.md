@@ -10,7 +10,7 @@ sourceLink: "https://github.com/AGB556/Hydra"
 
 ## Project Overview
 
-Hydra is a fully custom designed 5 toolhead CoreXY gantry 3D printer. It contains a large 310 mm x 310 mm x 240 mm build volume, automatic toolhead changes, auto z leveling, and a custom slicer profile. Designed fully in Onshape in my last year of high school over 100 hours of in CAD development, this printer was the first custom printer that made it out of the CAD stage. 
+Hydra is a fully custom designed 5 toolhead CoreXY gantry 3D printer. It contains a large 310 mm x 310 mm x 240 mm build volume, automatic toolhead changes, auto z leveling, and a custom slicer profile. Designed fully in Onshape in my last year of high school over 100 hours of in CAD development, this printer was the first custom printer that made it out of the CAD stage. I've always wanted to design a toolchanger 3D printer, so with some free time before college, I took the leap. 
 
 ## Design Overview
 
