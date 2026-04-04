@@ -2,7 +2,7 @@
 title: "Hydra"
 description: "Custom 5 head toolchanger 3D-Printer - Fully custom tool changing mechanism integrated with COTS printer parts"
 image: "/images/projects/Hydra/20250807_222804.jpg"
-startDate: "2024-12-07"
+startDate: "2025-05-01"
 endDate: "2025-09-30"
 skills: ["CAD (Onshape)", "Mechanical Design + Integration", "Electronics + Software Integration", "Klipper", "3D-Printing", "Manual Machining"]
 sourceLink: "https://github.com/AGB556/Hydra"
@@ -10,105 +10,93 @@ sourceLink: "https://github.com/AGB556/Hydra"
 
 ## Project Overview
 
-Mary UI Laravel Starter Kit is a comprehensive, production-ready foundation for building modern web applications. It combines the robustness of Laravel 12.x with the elegance of Mary UI and the reactivity of Livewire Volt, providing developers with everything they need to kickstart their next project.
+Hydra is a fully custom designed 5 toolhead CoreXY gantry 3D printer. It contains a large 310 mm x 310 mm x 240 mm build volume, automatic toolhead changes, auto z leveling, and a custom slicer profile. Designed fully in Onshape in my last year of high school over 100 hours of in CAD development, this printer was the first custom printer that made it out of the CAD stage. 
 
-### Repository Stats
+## Design Overview
 
-[![Laravel](https://img.shields.io/badge/Laravel-12.x-red?style=flat&logo=laravel)](https://laravel.com) [![Livewire](https://img.shields.io/badge/Livewire-3.x-purple?style=flat)](https://livewire.laravel.com)
-[![Mary UI](https://img.shields.io/badge/Mary_UI-2.x-blue?style=flat)](https://mary-ui.com)
-[![License](https://img.shields.io/badge/License-MIT-green?style=flat)](LICENSE)
---
-[![Packagist Version](https://img.shields.io/packagist/v/lauroguedes/mary-ui-starter-kit?style=flat)](https://packagist.org/packages/lauroguedes/mary-ui-starter-kit)
-[![Packagist Downloads](https://img.shields.io/packagist/dt/lauroguedes/mary-ui-starter-kit?style=flat)](https://packagist.org/packages/lauroguedes/mary-ui-starter-kit)
+Multi color and multi material printing has long been a passion of mine. This printer takes the best of both worlds, allowing for up to five different colors and/or materials to be used in one print. I made it my goal to fully design this printer in Onshape, allowing me to properly budget space and ensure that everything gets assembled smoothly. 
 
-## Core Technologies
+![Hydra design overview](/images/projects/Hydra/Hydra(3).png)
 
-- **Backend**: Laravel 12.x (PHP 8.2+)
-- **Frontend Framework**: Livewire 3.x with Volt
-- **UI Components**: [Mary UI](https://mary-ui.com)
-- **Styling**: Tailwind CSS 4.x + DaisyUI
-- **Icons**: Blade Hero and Font Awesome
-- **Build Tool**: Vite
-- **Database**: SQLite (default, easily switchable)
-- **Testing**: Pest framework
-- **Code Quality**: Pint, Rector
 
-## Authentication & User Management
 
-### Complete Auth System
-- Login, registration, and password reset flows
-- Email verification capabilities
-- User profile administration with avatar uploads
-- Session management
+### Frame and Electronics
 
-### User Administration Dashboard
-- Comprehensive CRUD operations for user management
-- User status tracking (Active, Inactive, Suspended)
-- Advanced search and filtering
-- Bulk operations support
+The frame of Hydra uses 2020 extrusion combined with 3D printed L brackets and CNC aluminum gussets to create a strong robust frame. It was designed to accomodate the COTS build plate and electronics box in the back while also being optomized to neat measurements to make manufacturing easier. 
 
-### OAuth Integration
-- **Google OAuth** authentication built-in
-- Social account connection to existing profiles
-- Extensible provider architecture for adding more OAuth providers
+I used 2020 extrusion for a few reasons: 
+ - interfaces well with the MGN9 rails I wanted to use
+ - easy to work with and build a platform off of        
+ - extrusion is easier to machine over sheet metal or round tube
 
-### Roles & Permissions
-Powered by **Spatie Laravel Permission** package for robust role-based access control:
-- Flexible permission system
-- Role assignment and management
-- Guard-based permissions
-- Easy integration with your application logic
+<div style="text-align:center;">
+  <img src="/images/projects/Hydra/hydraframe.png" alt="hydraframe" style="width:500px;max-width:100%;height:auto;display:inline-block;" />
+</div>
 
-## Developer Experience
+The frame ended up being just under 20" x 24", being just big enough to fit the entire 310 mm x 310mm build plate space while still being able to fit through a door easily. 
 
-### Testing
-- **80+ comprehensive tests** using Pest framework
-- Unit, feature, and browser tests included
-- Pre-configured test database setup
-- Test coverage for critical user flows
+I went with electronics on the back of the printer for:
+ - ease of access
+ - more workable space
+ - I already had to extend the printer out that way for the toolhead docks 
 
-### Code Quality Tools
-- **Pint**: Laravel's opinionated PHP code formatter
-- **Rector**: Automated code refactoring and upgrades
-- **LaraDumps**: Enhanced debugging and profiling
-- **Laravel Pail**: Real-time log tailing in the terminal
+ I am using the Big Tree Tech (BTT) Octopus Pro v1.1 for my mainboard, a Meanwell LRS-350-24 Power Supply, and a Raspberry Pi 5 for my coprocessor. Note that while the CAD contains a Pi 0 2W, I upgraded to a Pi 5 to install a touchscreen interface, shown below. I am also using the BTT U2C Can converter to communicate with my 5 toolheads over CAN protocol. These were all mounted on a piece of lasercut acrylic that also isolated the build chamber from the electronics to prevent overheating. 
 
-### Development Workflow
-Quick setup with one command:
-```bash
-laravel new my-app --using=lauroguedes/mary-ui-starter-kit
-```
+<div style="display:flex;gap:16px;justify-content:center;align-items:center;flex-wrap:wrap;">
+  <img src="/images/projects/Hydra/electronics.png" alt="electronics CAD" style="width:48%;max-width:500px;height:auto;" />
+  <img src="/images/projects/Hydra/1000017318.jpg" alt="electronics build" style="width:48%;max-width:500px;height:auto;" />
+</div>
 
-Or clone and install:
-```bash
-composer install
-npm install
-php artisan migrate --seed
-```
+### Toolhead + Toolchanger Design
+The toolhead and toolchanger design was custom designed by me in order to create a simple, reliable mechanism without needing a flying gantry (toolhead on a z axis). 
 
-Start development with hot reload:
-```bash
-composer dev
-```
+Looking at the mechanism, it utilizes a sprung servo system that uses a servo to open the latch and a spring to close it and keep the toolhead on the gantry. It also uses a pair of magnets and COTS nozzles to align the toolhead to the holder and keep it aligned. 
+<div style="text-align:center;">
+  <img src="/images/projects/Hydra/toolheadsection.png" alt="toolheadsection" style="width:500px;max-width:100%;height:auto;display:inline-block;" />
+</div>
+The toolchanger also holds the part cooling system, which contains a 5015 blower fan and custom ducts to direct the airflow at the optimal angle at the nozzle. The mounts were split up into multiple parts for printability and ease of assembly. 
 
-This launches the development server, queue worker, log monitor, and Vite with hot module replacement - all concurrently!
+The toolhead itself was designed around a few core concepts:
+ - cost
+ - ease of assembly
+ - performance
+ - horizontal footprint
+ - futureproofing
+With these constraints, I used the ProtoXtruder 2.0 combined with the Bambu Labs hotend and the BTT EBB 36 toolhead board, which allowed me to create a mostly printed, modular toolhead that had a horizontal footprint of 2.1 inches. This allowed me to fit all 5 toolheads into my limited space on the printer. 
+<div style="text-align:center;">
+  <img src="/images/projects/Hydra/toolhead.png" alt="toolhead" style="width:500px;max-width:100%;height:auto;display:inline-block;" />
+</div>
+To simplify my design further, I decided to mount the Z leveling probe to its own modified toolhead, freeing up much needed space on the toolchanger. Additionally, mounts to hold the toolheads when they were not in use that utilized magnets and a steel rod to align and hold the toolhead on were created, mounting above the electronics bay in the back.
 
-## Production Ready
+<div style="text-align:center;">
+  <img src="/images/projects/Hydra/toolheadhome.png" alt="toolheadmount" style="width:500px;max-width:100%;height:auto;display:inline-block;" />
+</div>
 
-- Optimized asset bundling with Vite
-- Database migrations and seeders included
-- Email templates with Mailpit for local testing
-- Environment-based configuration
-- Security best practices implemented out of the box
+### Motion System - X, Y, and Z
 
-## Perfect For
+I utilized a belt driven CoreXY motion system for my gantry, driven by two Nema 17 stepper motors. 
+### Firmware
 
-- SaaS applications requiring rapid development
-- Internal business tools and dashboards
-- Client projects with tight deadlines
-- Learning Laravel best practices and modern patterns
-- Prototyping and MVPs
+## Final Results
 
-## Open Source
+After assembling the entire printer, wiring it up, and troubleshooting many various problems with the wiring and firmware, Hydra was running smoothly. With my custom Orcaslicer profile, I could run some test multicolor prints, some of which are shown below. 
 
-This project is open source under the MIT License and welcomes contributions from the community. Visit the GitHub repository to report issues, suggest features, or contribute code.
+<div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:12px;">
+  <iframe
+    src="https://www.youtube-nocookie.com/embed/r3AWCBeJ4Wg"
+    title="Hydra Multicolor Print"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    referrerpolicy="strict-origin-when-cross-origin"
+    allowfullscreen
+    style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;"
+  ></iframe>
+</div>
+
+
+After some tuning, I got a 2 color benchy!
+
+<div style="text-align:center;">
+  <img src="/images/projects/Hydra/1000017086.jpg" alt="2colorbenchy" style="width:500px;max-width:100%;height:auto;display:inline-block;" />
+</div>
+
+I am currently working on adding and tuning in the other 3 toolheads along with fully enclosing the printer to print more exotic materials. 

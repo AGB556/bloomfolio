@@ -100,7 +100,7 @@ export const siteConfig: SiteConfig = {
   name: "Brendan Conover",
   title: "Maker and Engineer",
   description:
-    "Creating innovative solutions to complex problems. Maker, leader, aspiring Mechanical Engineer at Northeastern University",
+    "Creating innovative solutions to complex problems. Creator, leader, currently studying Mechanical Engineering at Northeastern University.",
   avatar: "C:/Users/bcono/bloomfolio/src/assets/conover_brendan(1).jpg",
   location: "Boston, MA, USA",
   email: "bj.conover556@gmail.com",
@@ -114,7 +114,7 @@ export const siteConfig: SiteConfig = {
     //instagram: "https://instagram.com/lauroguedes.dev",
     youTube: "https://www.youtube.com/@the-third-dimension-1",
   },
-  enableThemeSelector: true,
+  enableThemeSelector: false,
   extraLinks: {
     enable: true,
     links: [
