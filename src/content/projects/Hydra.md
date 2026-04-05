@@ -72,9 +72,20 @@ To simplify my design further, I decided to mount the Z leveling probe to its ow
   <img src="/images/projects/Hydra/toolheadhome.png" alt="toolheadmount" style="width:500px;max-width:100%;height:auto;display:inline-block;" />
 </div>
 
+<div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:12px;">
+  <iframe
+    src="https://www.youtube-nocookie.com/embed/rZie5YIdD2w"
+    title="Hydra Toolhead Swap"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    referrerpolicy="strict-origin-when-cross-origin"
+    allowfullscreen
+    style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;"
+  ></iframe>
+</div>
+
 ### Motion System - X, Y, and Z
 
-I utilized a belt driven CoreXY motion system for my gantry, driven by two Nema 17 stepper motors. 
+I utilized a belt driven CoreXY motion system for my gantry, driven by two Nema 17 stepper motors and GT2 Belts on MGN9 linear rails 
 ### Firmware
 
 ## Final Results
