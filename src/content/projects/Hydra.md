@@ -88,6 +88,7 @@ To simplify my design further, I decided to mount the Z leveling probe to its ow
 I utilized a belt driven CoreXY motion system for my gantry, driven by two Nema 17 stepper motors and GT2 Belts on MGN9 linear rails 
 ### Firmware
 
+The firmware used on Hydra was a fork of Klipper called Kalico, formerly known as Danger Klipper. I made a custom profile and built out individual macros for each individual tool change and homing sequence, optomizing them to be as quick as possible while still having a perfect tool swap rate. 
 ## Final Results
 
 After assembling the entire printer, wiring it up, and troubleshooting many various problems with the wiring and firmware, Hydra was running smoothly. With my custom Orcaslicer profile, I could run some test multicolor prints, some of which are shown below. 
