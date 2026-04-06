@@ -1,9 +1,9 @@
 ---
-title: "CCMini"
+title: "FIRST Robotics"
 description: "Custom 3D-Printer that explores a different type of motion system compared to standard COTS printers - a cantilevered cross gantry design that aims to push the limits of what it can actually do"
 image: "/images/projects/CCMini/1000016612.jpg"
 startDate: "2025-06-01"
-order: 3
+order: 5
 skills: ["CAD (Onshape)", "Mechanical Design + Integration", "Electronics + Software Integration", "Klipper", "3D-Printing"]
 sourceLink: "https://github.com/AGB556/CCMini"
 ---

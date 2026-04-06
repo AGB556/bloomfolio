@@ -4,9 +4,18 @@ import ProjectCard from "./ProjectCard.astro";
 
 const projectEntries = await getCollection("projects");
 
-// Sort by start date, most recent first
+// Sort by explicit order first (lowest first), then by start date (most recent first)
 const sortedProjects = projectEntries.sort(
-  (a, b) => b.data.startDate.getTime() - a.data.startDate.getTime()
+  (a, b) => {
+    const orderA = a.data.order ?? Number.MAX_SAFE_INTEGER;
+    const orderB = b.data.order ?? Number.MAX_SAFE_INTEGER;
+
+    if (orderA !== orderB) {
+      return orderA - orderB;
+    }
+
+    return b.data.startDate.getTime() - a.data.startDate.getTime();
+  }
 );
 ---
 
@@ -15,7 +24,7 @@ const sortedProjects = projectEntries.sort(
     <div class="text-center mb-6">
       <h2 class="text-3xl font-bold mb-3">My Projects</h2>
       <p class="text-base text-base-content/70">
-        Here are the various projects I've worked on over the years.
+        <!-- Here are the various projects I've worked on over the years. -->
       </p>
     </div>
 
