@@ -1,74 +1,30 @@
 ---
 title: "FIRST Robotics"
-description: "Custom 3D-Printer that explores a different type of motion system compared to standard COTS printers - a cantilevered cross gantry design that aims to push the limits of what it can actually do"
-image: "/images/projects/CCMini/1000016612.jpg"
+description: "About my time in FIRST Robotics as a designer, manufacturer, and wiring expert and the robots I helped make to compete with on the field."
+image: "/images/projects/FIRSTRobotics/wolfgang.png"
 startDate: "2025-06-01"
 order: 5
-skills: ["CAD (Onshape)", "Mechanical Design + Integration", "Electronics + Software Integration", "Klipper", "3D-Printing"]
-sourceLink: "https://github.com/AGB556/CCMini"
+skills: ["CAD (Onshape)", "Mechanical Design + Integration", "Electronics + Software Integration", "3D-Printing", "manufacturing"]
+sourceLink: "https://walpolerobotics.org"
 ---
 
-## About Code Tips
+## Overview
 
-Code Tips is a community-driven platform designed to help developers share, discover, and manage code snippets efficiently. Built with the philosophy that knowledge sharing accelerates learning, it provides a centralized repository for code examples across multiple programming languages.
+I was on FIRST Robotics Competition team 1153 for four years in high school, and ended up designing three of the four robots I competed with. These robots won 6 silver medals, 9 awards, and one even ended up being ranked in the top 48 robots in the world. I used Onshape to fully design these robots, and was responsible for manufacturing, assembling, and wiring up these robots as well. 
 
-## Core Features
+## Competition Robots
 
-### Comprehensive Code Snippet Management
-- **Create & Edit**: Full-featured code editor powered by Monaco Editor
-- **100+ Language Support**: Extensive syntax highlighting for Python, JavaScript, TypeScript, Java, C++, Go, Rust, PHP, Ruby, and many more
-- **Organize Your Code**: Personal library for managing your code snippets
-- **CRUD Operations**: Complete control over your code tips - create, read, update, and delete
+I designed three robots that competed in 2025, 2024, and 2023, shown below. 
 
-### Social & Discovery Features
-- **Like System**: Show appreciation for useful code snippets
-- **Explore Public Tips**: Browse code examples shared by the community
-- **Browse by Language**: Filter and discover tips for specific programming languages
-- **User Profiles**: Public developer profiles showcasing contributions and statistics
-- **View & Share Tracking**: Monitor the reach and impact of your code tips
+images of three bots side by side
 
-### Search & Navigation
-- **CodeTip Search**: Quickly find relevant code examples
-- **Language Filters**: Navigate through language-specific collections
-- **Discovery Feed**: Explore trending and popular code snippets
+These robots were designed with being unique in mind, as we were not afraid to try something different. We had to balance how much innovation we could do in the 4 weeks we had for design with the small team that we had, never having more than 10 people on the team in any given year. We also standardized on specific thicknesses and types of material (such as 1/4" polycarbonate, 1/8in and 1/4in aluminum) and sticking with #10 hardware every place we could. Our prototyping and design process, combined with our technical documentation and spreadsheets to track tasks and manufacturing set us up for success on and off the field, winning 6 silver medals, 9 awards, and being top 48 in the world in 2025, including a silver medal at Championships. 
 
-## Technical Architecture
+### Cadathons
 
-### Frontend Stack
-Built with modern web technologies for a smooth, reactive experience:
-- **Vue 3**: Progressive JavaScript framework with Composition API
-- **TypeScript**: Type-safe development for robust code
-- **Monaco Editor**: Industry-standard code editor (powers VS Code)
-- **Tailwind CSS**: Utility-first CSS framework for custom designs
-- **Ziggy**: Laravel route helper for seamless frontend routing
+I also competed in and won two cadathons - a cad competition where you have around a week to fully design a robot that could compete for a hypothetical game. The technical binders for those winning submissions are below.
 
-### Backend Infrastructure
-Powered by **Laravel** (PHP), the backend provides:
-- Route-based architecture with clean separation of concerns
-- RESTful API endpoints for all operations
-- Database-driven content management
-- Session-based authentication and user management
+[DDS Winter Cadathon 2023](https://docs.google.com/document/d/1NWPqIlKru55cYiTqR7oexpBmehZZDWZMny1_LcYR1uQ/edit?tab=t.0)
 
-### User Experience
-- **Light/Dark Mode**: Theme support with system preference detection
-- **Responsive Design**: Optimized for desktop and mobile devices
-- **OG Image Generation**: Social media preview images for shared snippets
-- **Component-Driven UI**: Modular, maintainable component architecture
+[WCP Cadathon 2024](https://docs.google.com/document/d/1mjGhXQ5QMQAcIJeAKBmeG6eK2-oeoVftNuwgpiOkOQQ/edit?tab=t.0)
 
-## Authentication & User Management
-- Complete authentication system with login and registration
-- Email verification for account security
-- Password reset functionality
-- Social login integration for quick access
-- User profile customization
-
-## Purpose & Impact
-
-Code Tips serves as a valuable resource for developers of all skill levels - from beginners learning new languages to experienced developers documenting solutions. By providing a centralized, searchable platform for code snippets, it helps developers:
-
-- Save time by reusing proven code patterns
-- Learn from community-shared examples
-- Document and organize their own code library
-- Share knowledge and contribute to the developer community
-
-The platform emphasizes collaboration and knowledge exchange, making programming resources more accessible to everyone.

@@ -1,10 +1,10 @@
 ---
-title: "Northeastern FSAE"
-description: "Custom 3D-Printer that explores a different type of motion system compared to standard COTS printers - a cantilevered cross gantry design that aims to push the limits of what it can actually do"
+title: "Northeastern Electric Racing"
+description: "Part of a team of Northeastern students who fully design, manufacture, and build an electric car for the FSAE and FHE competitions"
 image: "/images/projects/CCMini/1000016612.jpg"
-startDate: "2025-06-01"
+startDate: "2025-09-01"
 order: 4
-skills: ["CAD (Onshape)", "Mechanical Design + Integration", "Electronics + Software Integration", "Klipper", "3D-Printing"]
+skills: ["CAD (Solidworks)", "Mechanical Design + Integration", "Electronics + Software Integration", "3D-Printing"]
 sourceLink: "https://github.com/AGB556/CCMini"
 ---
 

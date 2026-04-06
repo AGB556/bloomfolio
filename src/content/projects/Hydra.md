@@ -20,7 +20,6 @@ Multi color and multi material printing has long been a passion of mine. This pr
 ![Hydra design overview](/images/projects/Hydra/Hydra(3).png)
 
 
-
 ### Frame and Electronics
 
 The frame of Hydra uses 2020 extrusion combined with 3D printed L brackets and CNC aluminum gussets to create a strong robust frame. It was designed to accomodate the COTS build plate and electronics box in the back while also being optomized to neat measurements to make manufacturing easier. 
@@ -55,7 +54,7 @@ Looking at the mechanism, it utilizes a sprung servo system that uses a servo to
 <div style="text-align:center;">
   <img src="/images/projects/Hydra/toolheadsection.png" alt="toolheadsection" style="width:500px;max-width:100%;height:auto;display:inline-block;" />
 </div>
-The toolchanger also holds the part cooling system, which contains a 5015 blower fan and custom ducts to direct the airflow at the optimal angle at the nozzle. The mounts were split up into multiple parts for printability and ease of assembly. 
+The toolchanger also holds the part cooling system, which contains a 5015 blower fan and custom ducts to direct the airflow at the optimal angle at the nozzle. The mounts were split up into multiple parts for printability and ease of assembly. The toolchanger block also held the belt mounts for the CoreXY system itself.
 
 The toolhead itself was designed around a few core concepts:
  - cost
@@ -86,10 +85,30 @@ To simplify my design further, I decided to mount the Z leveling probe to its ow
 
 ### Motion System - X, Y, and Z
 
-I utilized a belt driven CoreXY motion system for my gantry, driven by two Nema 17 stepper motors and GT2 Belts on MGN9 linear rails 
+I utilized a belt driven CoreXY motion system for my gantry, driven by two Nema 17 stepper motors and GT2 Belts on MGN9 linear rails, chosen for a combination of strength, speed, and cost. 
+
+picture of full gantry
+
+The motor mounts were a two part system that build in the idlers to redirect the belt in the direction I want along with housing an additional bearing to keep the shaft from being cantilevered by the belt. 
+
+picture of motor mount
+
+I used a CNC .25" aluminum plate to mount the moving part of the gantry to the Y axis linear rails. These mounts also held the idler pulleys to redirect the belt to the desired path. 
+
+picture of gantry top view w/belt path drawn
+
+The belt tensioners were built into the belt path using an idler pulley and a pair of bolts that could tighten into heat set inserts to pull the belt tighter. This allows the belt to be put on loose and tightened down to the proper tension. 
+
+picture of belt tensioner
 ### Firmware
 
 The firmware used on Hydra was a fork of Klipper called Kalico, formerly known as Danger Klipper. I made a custom profile and built out individual macros for each individual tool change and homing sequence, optomizing them to be as quick as possible while still having a perfect tool swap rate. 
+
+show pictures of code here
+
+I also created and tuned a custom print profile on Orcaslicer, optomized for speed while still keeping print quality consistent. I also tuned in the purge tower in order to reduce the amount of filament waste that was created when printing in multiple colors. 
+
+picture of the slicer here
 ## Final Results
 
 After assembling the entire printer, wiring it up, and troubleshooting many various problems with the wiring and firmware, Hydra was running smoothly. With my custom Orcaslicer profile, I could run some test multicolor prints, some of which are shown below. 
