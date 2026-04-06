@@ -35,7 +35,7 @@ const projects = defineCollection({
     description: z.string(),
     image: z.string(),
     startDate: z.coerce.date(),
-    order: z.number().int().positive().optional(),
+    order: z.coerce.number().int().positive().optional(),
     endDate: z.coerce.date().optional(),
     skills: z.array(z.string()),
     demoLink: z.string().url().optional(),
