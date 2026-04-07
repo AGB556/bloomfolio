@@ -1,7 +1,7 @@
 ---
 title: "Northeastern Electric Racing"
-description: "Part of a team of Northeastern students who fully design, manufacture, and build an electric car for the FSAE and FHE competitions"
-image: "/images/projects/CCMini/1000016612.jpg"
+description: "About my time on a team of Northeastern students who fully design, manufacture, and build an electric car for the FSAE and FHE competitions"
+image: "/images/projects/NER/segments.jpg"
 startDate: "2025-09-01"
 order: 4
 skills: ["CAD (Solidworks)", "Mechanical Design + Integration", "Electronics + Software Integration", "3D-Printing"]

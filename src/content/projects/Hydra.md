@@ -87,28 +87,38 @@ To simplify my design further, I decided to mount the Z leveling probe to its ow
 
 I utilized a belt driven CoreXY motion system for my gantry, driven by two Nema 17 stepper motors and GT2 Belts on MGN9 linear rails, chosen for a combination of strength, speed, and cost. 
 
-picture of full gantry
+<div style="text-align:center;">
+  <img src="/images/projects/Hydra/gantry.png" alt="gantry" style="width:500px;max-width:100%;height:auto;display:inline-block;" />
+</div>
 
 The motor mounts were a two part system that build in the idlers to redirect the belt in the direction I want along with housing an additional bearing to keep the shaft from being cantilevered by the belt. 
 
-picture of motor mount
+<div style="text-align:center;">
+  <img src="/images/projects/Hydra/motormount.png" alt="motormount" style="width:500px;max-width:100%;height:auto;display:inline-block;" />
+</div>
 
-I used a CNC .25" aluminum plate to mount the moving part of the gantry to the Y axis linear rails. These mounts also held the idler pulleys to redirect the belt to the desired path. 
+I used a CNC .25" aluminum plate to mount the moving part of the gantry to the Y axis linear rails. These mounts also held the idler pulleys to redirect the belt to the desired path. The belt path is shown below, with there being 2 belts - one per motor. 
 
-picture of gantry top view w/belt path drawn
+<div style="text-align:center;">
+  <img src="/images/projects/Hydra/beltpath.png" alt="beltpath" style="width:500px;max-width:100%;height:auto;display:inline-block;" />
+</div>
 
 The belt tensioners were built into the belt path using an idler pulley and a pair of bolts that could tighten into heat set inserts to pull the belt tighter. This allows the belt to be put on loose and tightened down to the proper tension. 
 
-picture of belt tensioner
+<div style="text-align:center;">
+  <img src="/images/projects/Hydra/beltensioner.png" alt="belttensioner" style="width:500px;max-width:100%;height:auto;display:inline-block;" />
+</div>
+
 ### Firmware
 
-The firmware used on Hydra was a fork of Klipper called Kalico, formerly known as Danger Klipper. I made a custom profile and built out individual macros for each individual tool change and homing sequence, optomizing them to be as quick as possible while still having a perfect tool swap rate. 
+The firmware used on Hydra was a fork of Klipper called Kalico, formerly known as Danger Klipper. I made a custom profile and built out individual macros for each individual tool change and homing sequence, optomizing them to be as quick as possible while still having a perfect tool swap rate. The code can be found on the github. 
 
 show pictures of code here
 
-I also created and tuned a custom print profile on Orcaslicer, optomized for speed while still keeping print quality consistent. I also tuned in the purge tower in order to reduce the amount of filament waste that was created when printing in multiple colors. 
+I also created and tuned a custom print profile on Orcaslicer, optomized for speed while still keeping print quality consistent. I also tuned in the purge tower in order to reduce the amount of filament waste that was created when printing in multiple colors. The slicer profile can be found on the github. 
 
 picture of the slicer here
+
 ## Final Results
 
 After assembling the entire printer, wiring it up, and troubleshooting many various problems with the wiring and firmware, Hydra was running smoothly. With my custom Orcaslicer profile, I could run some test multicolor prints, some of which are shown below. 
