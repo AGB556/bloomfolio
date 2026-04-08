@@ -4,7 +4,7 @@ description: "Custom 3D-Printer that explores a different type of motion system 
 image: "/images/projects/CCMini/1000016612.jpg"
 startDate: "2025-06-01"
 order: 3
-skills: ["CAD (Onshape)", "Mechanical Design + Integration", "Electronics + Software Integration", "Klipper", "3D-Printing"]
+skills: ["CAD (Onshape)", "Mechanical Design", "Electronics", "Software (Klipper)", "3D-Printing"]
 sourceLink: "https://github.com/AGB556/CCMini"
 ---
 

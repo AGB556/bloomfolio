@@ -5,7 +5,7 @@ image: "/images/projects/Hydra/20250807_222804.jpg"
 startDate: "2025-05-01"
 order: 1
 endDate: "2025-09-30"
-skills: ["CAD (Onshape)", "Mechanical Design + Integration", "Electronics + Software Integration", "Klipper", "3D-Printing", "Manual Machining"]
+skills: ["CAD (Onshape)", "Mechanical Design", "Electronics", "Software (Klipper)", "3D-Printing", "Manufacturing"]
 sourceLink: "https://github.com/AGB556/Hydra"
 ---
 
@@ -113,11 +113,13 @@ The belt tensioners were built into the belt path using an idler pulley and a pa
 
 The firmware used on Hydra was a fork of Klipper called Kalico, formerly known as Danger Klipper. I made a custom profile and built out individual macros for each individual tool change and homing sequence, optomizing them to be as quick as possible while still having a perfect tool swap rate. The code can be found on the github. 
 
-show pictures of code here
 
 I also created and tuned a custom print profile on Orcaslicer, optomized for speed while still keeping print quality consistent. I also tuned in the purge tower in order to reduce the amount of filament waste that was created when printing in multiple colors. The slicer profile can be found on the github. 
 
-picture of the slicer here
+<div style="text-align:center;">
+  <img src="/images/projects/Hydra/slicer.png" alt="slicer" style="width:500px;max-width:100%;height:auto;display:inline-block;" />
+</div>
+
 
 ## Final Results
 
