@@ -8,67 +8,61 @@ skills: ["CAD (Onshape)", "Mechanical Design", "Electronics", "Software (Klipper
 sourceLink: "https://github.com/AGB556/CCMini"
 ---
 
-## About Code Tips
+## Project Overview
 
-Code Tips is a community-driven platform designed to help developers share, discover, and manage code snippets efficiently. Built with the philosophy that knowledge sharing accelerates learning, it provides a centralized repository for code examples across multiple programming languages.
+CCMini is an experimental printer designed to explore a cantilevered cross gantry printer on a small scale with only a 120mm x 120mm bed, hence the name. I wanted to create a design that I could use to test the limits of this kinematic system while also creating a function printer. 
 
-## Core Features
+## Design Overview
 
-### Comprehensive Code Snippet Management
-- **Create & Edit**: Full-featured code editor powered by Monaco Editor
-- **100+ Language Support**: Extensive syntax highlighting for Python, JavaScript, TypeScript, Java, C++, Go, Rust, PHP, Ruby, and many more
-- **Organize Your Code**: Personal library for managing your code snippets
-- **CRUD Operations**: Complete control over your code tips - create, read, update, and delete
+Fully designed in Onshape, this printer requires no subtractive manufacturing in a typical shop environment, only another 3D printer to make all the parts required. 
 
-### Social & Discovery Features
-- **Like System**: Show appreciation for useful code snippets
-- **Explore Public Tips**: Browse code examples shared by the community
-- **Browse by Language**: Filter and discover tips for specific programming languages
-- **User Profiles**: Public developer profiles showcasing contributions and statistics
-- **View & Share Tracking**: Monitor the reach and impact of your code tips
+![CCMini design overview](/images/projects/CCMini/1000016971.jpg)
 
-### Search & Navigation
-- **CodeTip Search**: Quickly find relevant code examples
-- **Language Filters**: Navigate through language-specific collections
-- **Discovery Feed**: Explore trending and popular code snippets
 
-## Technical Architecture
+### Frame and Electronics
 
-### Frontend Stack
-Built with modern web technologies for a smooth, reactive experience:
-- **Vue 3**: Progressive JavaScript framework with Composition API
-- **TypeScript**: Type-safe development for robust code
-- **Monaco Editor**: Industry-standard code editor (powers VS Code)
-- **Tailwind CSS**: Utility-first CSS framework for custom designs
-- **Ziggy**: Laravel route helper for seamless frontend routing
+CCMini's frame was designed to be 3D printed. This was done because the small size and footprint of the machine allowed for this to be possible. This makes the printer easier to manufacture and allows me to build in the electronics mounts directly to the frame. 
 
-### Backend Infrastructure
-Powered by **Laravel** (PHP), the backend provides:
-- Route-based architecture with clean separation of concerns
-- RESTful API endpoints for all operations
-- Database-driven content management
-- Session-based authentication and user management
+<div style="text-align:center;">
+  <img src="/images/projects/Hydra/hydraframe.png" alt="hydraframe" style="width:500px;max-width:100%;height:auto;display:inline-block;" />
+</div>
 
-### User Experience
-- **Light/Dark Mode**: Theme support with system preference detection
-- **Responsive Design**: Optimized for desktop and mobile devices
-- **OG Image Generation**: Social media preview images for shared snippets
-- **Component-Driven UI**: Modular, maintainable component architecture
+For electronics, I am using an SKR Mini E3V3 control board combined with a Pi 3A for the coprocessor to run Klipper. The SKR Mini E3V3 can drive all of the components needed for this smaller printer, including the 5 stepper motors, fans, and z probe. The Pi is used to run klipper along with a 7" Touchscreen for the interface. There was also a small power supply to convert the 120VAC into 24VDC to power all of the components. 
 
-## Authentication & User Management
-- Complete authentication system with login and registration
-- Email verification for account security
-- Password reset functionality
-- Social login integration for quick access
-- User profile customization
+There were also a set of 4010 fans built into the frame on the side to prove cooling for the electronics inside the frame. 
+<div style="display:flex;gap:16px;justify-content:center;align-items:center;flex-wrap:wrap;">
+  <img src="/images/projects/Hydra/electronics.png" alt="electronics CAD" style="width:48%;max-width:500px;height:auto;" />
+  <img src="/images/projects/Hydra/1000017318.jpg" alt="electronics build" style="width:48%;max-width:500px;height:auto;" />
+</div>
 
-## Purpose & Impact
 
-Code Tips serves as a valuable resource for developers of all skill levels - from beginners learning new languages to experienced developers documenting solutions. By providing a centralized, searchable platform for code snippets, it helps developers:
 
-- Save time by reusing proven code patterns
-- Learn from community-shared examples
-- Document and organize their own code library
-- Share knowledge and contribute to the developer community
+### Toolhead + Toolchanger Design
+Due to the nature of this cross gantry system, I decided to design my own toolhead to fit the space requirements. 
 
-The platform emphasizes collaboration and knowledge exchange, making programming resources more accessible to everyone.
+Picture of toolhead here
+
+Due to the perpendicular nature of the linear rails in thise cross gantry system, I split the mount into a few parts for easier assembly. I decided to go with a bowden drive with a V6 hotend to minimize weight and difficulty of assembly. The V6 hotend was chosen because it was cheap and very easy to build into a system without needing complicated designs, and the bowden drive was chosen to reduce the amount of weight on the toolhead, as the cantilevered design would perform better with less mass to move. 
+
+I also mounted a 4010 blower fan onto the system for part cooling, combined with some ducts in order to direct the airflow onto the part as it prints.
+
+
+### Motion System - X, Y, and Z
+
+The motion system for X and Y is a Cross Gantry system, where the linear rails or rods cross over each other for increased stability and strength, allowing for faster speeds overall. The Z motion system was 2 motors with a belted Z setup, allowing for even z movement. The X and Y system also used belts, all of which were GT2. I used MGN9C linear rails and carriages for everything. 
+
+picture of gantry - x, y, z
+
+I added a third z linear rail for better stability and to have a spot for the motor mounts. The motors for the X and Y motion, along with the extruder all mount to this big mount here. Additionally, on the two powered z mounts that interface with the linear rails and z belts, there is a mount for the XY belt train to follow. 
+
+Picture of the belt tensioners for X and Z
+
+For belt tensioning, I decided to use a pair of belt clamps for each belt, both X, Y, and Z. While suboptimal in achieving the perfect tension, due to the space constraints I had, they could get close enough to what I wanted for belt tension. 
+
+### Firmware
+
+The firmware used on CCMini was a fork of Klipper called Kalico, formerly known as Danger Klipper. I made a custom profile in order to have better control over my system. 
+
+## Final Results
+
+I am still currently working on bringing up the printer fully, but am working out some bugs and working towards my first print. 

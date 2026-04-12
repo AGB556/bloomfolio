@@ -62,7 +62,7 @@ The toolhead itself was designed around a few core concepts:
  - performance
  - horizontal footprint
  - futureproofing
-With these constraints, I used the ProtoXtruder 2.0 combined with the Bambu Labs hotend and the BTT EBB 36 toolhead board, which allowed me to create a mostly printed, modular toolhead that had a horizontal footprint of 2.1 inches. This allowed me to fit all 5 toolheads into my limited space on the printer. 
+With these constraints, I used the ProtoXtruder 2.0 combined with the Bambu Labs hotend and the BTT EBB 36 toolhead board, which allowed me to create a mostly printed, modular toolhead that had a horizontal footprint of 2.1 inches. This allowed me to fit all 5 toolheads into my limited space on the printer. I went with direct drive to increase the number of different filaments I could reliably print with over bowden drive, along with being able to mount the toolhead board to the motor of the extruder, leading to better packaging. 
 <div style="text-align:center;">
   <img src="/images/projects/Hydra/toolhead.png" alt="toolhead" style="width:500px;max-width:100%;height:auto;display:inline-block;" />
 </div>
@@ -108,6 +108,14 @@ The belt tensioners were built into the belt path using an idler pulley and a pa
 <div style="text-align:center;">
   <img src="/images/projects/Hydra/beltensioner.png" alt="belttensioner" style="width:500px;max-width:100%;height:auto;display:inline-block;" />
 </div>
+
+For the Z Axis, I used a triple zed leadscrew setup with custom kinematic mounts in order to allow for automatic bed leveling and bed flatness tests. 
+
+Picture of z axis
+
+The kinematic mounts allow for the bed to remain flat as it expands and contracts due to the heat from the heated bed. The aluminum bed plate is bolted to three steel balls that rest on metal rods in the mount. There are magnets under these rods that are strong enough to contrain the steel balls to the rods, but still allow them to slide along the path those rods create. 
+
+picture of mounts
 
 ### Firmware
 
