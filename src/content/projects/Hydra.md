@@ -111,11 +111,15 @@ The belt tensioners were built into the belt path using an idler pulley and a pa
 
 For the Z Axis, I used a triple zed leadscrew setup with custom kinematic mounts in order to allow for automatic bed leveling and bed flatness tests. 
 
-Picture of z axis
+<div style="text-align:center;">
+  <img src="/images/projects/Hydra/zaxis.png" alt="zaxis" style="width:500px;max-width:100%;height:auto;display:inline-block;" />
+</div>
 
 The kinematic mounts allow for the bed to remain flat as it expands and contracts due to the heat from the heated bed. The aluminum bed plate is bolted to three steel balls that rest on metal rods in the mount. There are magnets under these rods that are strong enough to contrain the steel balls to the rods, but still allow them to slide along the path those rods create. 
 
-picture of mounts
+<div style="text-align:center;">
+  <img src="/images/projects/Hydra/kinematic.png" alt="kinematic" style="width:500px;max-width:100%;height:auto;display:inline-block;" />
+</div>
 
 ### Firmware
 

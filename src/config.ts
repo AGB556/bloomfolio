@@ -100,7 +100,7 @@ export const siteConfig: SiteConfig = {
   name: "Brendan Conover",
   title: "Maker and Engineer",
   description:
-    "Creating innovative solutions to complex problems. Creator, leader, currently studying Mechanical Engineering at Northeastern University.",
+    "Creating innovative solutions to complex problems. Passionate in 3D printing, robotics, and renewable energy, with experience in mechanical design and multiple CAD software, 3D printing, and manufacturing + assembly of designs. Creator, leader, currently studying Mechanical Engineering at Northeastern University.",
   avatar: "C:/Users/bcono/bloomfolio/src/assets/conover_brendan(1).jpg",
   location: "Boston, MA, USA",
   email: "bj.conover556@gmail.com",
