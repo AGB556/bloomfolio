@@ -116,7 +116,7 @@ export const siteConfig: SiteConfig = {
   },
   enableThemeSelector: false,
   extraLinks: {
-    enable: true,
+    enable: false,
     links: [
       {
         link: "/blog/guides/bloomfolio-complete-guide",
