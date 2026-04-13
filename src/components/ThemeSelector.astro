@@ -4,10 +4,6 @@ import { Palette } from "@lucide/astro";
 const themes = [
   { value: "light", label: "Light" },
   { value: "dark", label: "Dark" },
-  { value: "synthwave", label: "Synthwave" },
-  { value: "retro", label: "Retro" },
-  { value: "valentine", label: "Valentine" },
-  { value: "dim", label: "Dim" },
 ];
 ---
 
@@ -38,17 +34,10 @@ const themes = [
 </div>
 
 <script is:inline>
-  // Set theme on page load based on localStorage or system preference
+  // Set theme on page load based on localStorage, defaulting to dark
   function setTheme() {
     const savedTheme = localStorage.getItem("theme");
-    let theme = savedTheme;
-
-    // If no saved theme, use system preference
-    if (!theme) {
-      theme = window.matchMedia("(prefers-color-scheme: dark)").matches
-        ? "dark"
-        : "light";
-    }
+    const theme = savedTheme || "dark";
 
     // Apply theme to document
     document.documentElement.setAttribute("data-theme", theme);

@@ -17,10 +17,9 @@
 </label>
 
 <script is:inline>
-  // Set theme on page load based on localStorage or system preference
+  // Set theme on page load based on localStorage, defaulting to dark
   function setTheme() {
-    const theme = localStorage.getItem('theme') ||
-                  (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    const theme = localStorage.getItem('theme') || 'dark';
     document.documentElement.setAttribute('data-theme', theme);
     const toggle = document.querySelector('.theme-controller');
     if (toggle) {
