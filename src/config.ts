@@ -104,7 +104,7 @@ export const siteConfig: SiteConfig = {
   avatar: "C:/Users/bcono/bloomfolio/src/assets/conover_brendan(1).jpg",
   location: "Boston, MA, USA",
   email: "bj.conover556@gmail.com",
-  resume: "https://drive.google.com/file/d/1nnYYnUpTmhMNazgE-BjdAMeCk6e0YDSH/view?usp=sharing",
+  resume: "/images/Brendan_Conover_s_Resume-2.pdf",
   socialLinks: {
     github: "https://github.com/AGB556",
     linkedin: "https://www.linkedin.com/in/brendan-conover-0b4b51310/",
