@@ -117,9 +117,7 @@ For the Z Axis, I used a triple zed leadscrew setup with custom kinematic mounts
 
 The kinematic mounts allow for the bed to remain flat as it expands and contracts due to the heat from the heated bed. The aluminum bed plate is bolted to three steel balls that rest on metal rods in the mount. There are magnets under these rods that are strong enough to contrain the steel balls to the rods, but still allow them to slide along the path those rods create. 
 
-<div style="text-align:center;">
-  <img src="/images/projects/Hydra/kinematic.png" alt="kinematic" style="width:500px;max-width:100%;height:auto;display:inline-block;" />
-</div>
+
 
 ### Firmware
 
@@ -150,9 +148,6 @@ After assembling the entire printer, wiring it up, and troubleshooting many vari
 
 
 After some tuning, I got a 2 color benchy!
-
 <div style="text-align:center;">
   <img src="/images/projects/Hydra/1000017086.jpg" alt="2colorbenchy" style="width:500px;max-width:100%;height:auto;display:inline-block;" />
 </div>
-
-I am currently working on adding and tuning in the other 3 toolheads along with fully enclosing the printer to print more exotic materials. 

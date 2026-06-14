@@ -70,6 +70,3 @@ For belt tensioning, I decided to use a pair of belt clamps for each belt, both 
 
 The firmware used on CCMini was a fork of Klipper called Kalico, formerly known as Danger Klipper. I made a custom profile in order to have better control over my system. 
 
-## Final Results
-
-I am still currently working on bringing up the printer fully, but am working out some bugs and working towards my first print. So far, the motion is smooth. 
