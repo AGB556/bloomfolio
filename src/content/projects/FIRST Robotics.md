@@ -6,7 +6,6 @@ startDate: "2021-09-01"
 endDate: "2025-05-01"
 order: 5
 skills: ["CAD (Onshape)", "Mechanical Design", "Electronics", "3D-Printing", "Manufacturing"]
-sourceLink: "https://walpolerobotics.org"
 ---
 
 ## Overview

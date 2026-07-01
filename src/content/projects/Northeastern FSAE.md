@@ -5,7 +5,7 @@ image: "/images/projects/NER/segments.jpg"
 startDate: "2025-09-01"
 order: 4
 skills: ["CAD (Solidworks)", "Mechanical Design", "3D-Printing", "Manufacturing"]
-sourceLink: "https://github.com/AGB556/CCMini"
+
 ---
 
 ## Overview
