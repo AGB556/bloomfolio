@@ -3,7 +3,7 @@ title: "Cycloidal Gearbox"
 description: "Custom cycloidal gearbox designed for my robot dog, 20:1 reduction in a small form factor"
 image: "/images/projects/Robot Dog/20260630_223607.jpg"
 startDate: "2026-05-01"
-order: 1
+order: 4
 endDate: "2025-07-30"
 skills: ["CAD (Onshape)", "Mechanical Design"]
 
