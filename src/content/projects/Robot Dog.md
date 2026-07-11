@@ -36,7 +36,34 @@ Finally, there is a built in Redux Throughbore Magnetic Encoder on each of the s
 
 ### The Leg
 
-More details to come
+<div style="text-align:center;">
+  <img src="/images/projects/Robot Dog/shouldermain.png" alt="gearbox" style="width:500px;max-width:100%;height:auto;display:inline-block;" />
+</div>
+
+There are 4 leg assemblies, with the right and left sides being mirror images of each other. 
+
+<div style="text-align:center;">
+  <img src="/images/projects/Robot Dog/shoulderclose.png" alt="gearbox" style="width:500px;max-width:100%;height:auto;display:inline-block;" />
+</div>
+The shoulder is driven using a capstan drive, which uses a spool and rope to create a reduction. This is designed with an initial gear reduction to generate enough torque for the robot to hold itself. There is a built in tensioner on each side of the capstan in order to hold proper tension on the rope. This is done through a simple bolt and captive nut setup. 
+
+<div style="text-align:center;">
+  <img src="/images/projects/Robot Dog/gearbox.png" alt="gearbox" style="width:500px;max-width:100%;height:auto;display:inline-block;" />
+</div>
+
+The leg utilizes a coaxial power setup for the knee, allowing both motors to remain on the frame, making wiring extremely easy. There is a captive cycloidal gearbox to create a large enough reduction for the knee. 
+
+<div style="text-align:center;">
+  <img src="/images/projects/Robot Dog/coaxial encoder.png" alt="gearbox" style="width:500px;max-width:100%;height:auto;display:inline-block;" />
+</div>
+
+There is also a coaxial encoder setup for the individual joints. Using a clever stack of bearings, different types of shafts, and two different encoder housings, I created a compact setup that individually reads the two joint positions. 
+
+<div style="text-align:center;">
+  <img src="/images/projects/Robot Dog/knee.png" alt="gearbox" style="width:500px;max-width:100%;height:auto;display:inline-block;" />
+</div>
+
+The knee is belt driven for low weight and backlash. It has two tensioners to keep proper tension on the belt. The knee pulley and subsequent lower leg segment are one set of sandwiched plates that connects up to the custom grippy foot. 
 
 ### Electronics
 
@@ -49,4 +76,4 @@ The electronics stack has a RPI5 at the top running ROS and communicating with t
 
 ### Firmware
 
-The firmware is ROS2 controlling the robot. More details to come. 
+The firmware is ROS2 controlling the robot. Gazebo simulation was used to test the robot in software before running code on the real bot. More details to come. 
