@@ -1,6 +1,6 @@
 ---
 title: "Robot Dog"
-description: "Custom 12DOF large form factor robot quadruped"
+description: "Custom 12DOF large form factor quadrupedal robot"
 image: "/images/projects/Robot Dog/Main(12).png"
 startDate: "2026-05-01"
 order: 1

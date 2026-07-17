@@ -11,6 +11,7 @@ const work = defineCollection({
     endDate: z.coerce.date().optional(),
     logo: z.string().optional(),
     link: z.string().url().optional(),
+    skills: z.array(z.string()).optional(),
   }),
 });
 
@@ -24,6 +25,7 @@ const education = defineCollection({
     endDate: z.coerce.date().optional(),
     logo: z.string().optional(),
     link: z.string().url().optional(),
+    skills: z.array(z.string()).optional(),
   }),
 });
 

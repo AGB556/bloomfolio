@@ -1,5 +1,6 @@
 ---
 import { getCollection, render } from "astro:content";
+import SkillBadge from "./SkillBadge.astro";
 
 interface Props {
   collection: "work" | "education";
@@ -101,6 +102,13 @@ const entriesWithContent = await Promise.all(
                     <div class="prose prose-sm max-w-none text-base-content/80 break-words">
                       <Content />
                     </div>
+                    {entry.data.skills?.length && (
+                      <div class="flex flex-wrap gap-2 mt-4">
+                        {entry.data.skills.map((skill) => (
+                          <SkillBadge skill={skill} />
+                        ))}
+                      </div>
+                    )}
                     {entry.data.link && (
                       <div class="card-actions justify-end mt-4">
                         <a
@@ -158,6 +166,13 @@ const entriesWithContent = await Promise.all(
                   <div class="prose prose-sm max-w-none text-base-content/80">
                     <Content />
                   </div>
+                  {entry.data.skills?.length && (
+                    <div class="flex flex-wrap gap-2 mt-4">
+                      {entry.data.skills.map((skill) => (
+                        <SkillBadge skill={skill} />
+                      ))}
+                    </div>
+                  )}
                   {entry.data.link && (
                     <div class="flex justify-end">
                       <a

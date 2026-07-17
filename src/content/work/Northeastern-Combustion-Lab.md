@@ -5,6 +5,10 @@ logo: "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.pngkey.co
 startDate: "2026-01-10"
 endDate: "2026-05-01"
 link: https://coe.northeastern.edu/people/levendis-yiannis/
+skills:
+  - Research
+  - Data Analysis (Excel)
+  - Experimentation
 ---
 
 Collecting and analyzing data obtained from igniting iron particles in order to evaluate their use in the iron energy cycle and energy storage. 
