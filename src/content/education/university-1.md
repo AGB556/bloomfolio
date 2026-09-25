@@ -7,4 +7,4 @@ endDate: "2029-04-01"
 link: "https://www.northeastern.edu/"
 ---
 
-Mechanical Engineering. FSAE and Club Esports
+Mechanical Engineering. Combustion and RIVeR Lab, Club Esports Captain

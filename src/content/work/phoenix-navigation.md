@@ -3,7 +3,8 @@ title: "Phoenix Navigation Components"
 subtitle: "Engineering Associate"
 logo: "https://api.dicebear.com/9.x/shapes/svg?seed=Easton"
 startDate: "2025-06-01"
-endDate: "2027-06-01"
+current: true
+#endDate: "2027-06-01"
 link: https://www.linkedin.com/in/chris-reynolds-181a14b/
 skills:
   - CAD (Onshape)

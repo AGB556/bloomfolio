@@ -33,13 +33,13 @@ const sortedEntries = entries.sort(
   (a, b) => b.data.startDate.getTime() - a.data.startDate.getTime()
 );
 
-function formatPeriod(startDate: Date, endDate?: Date) {
+function formatPeriod(startDate: Date, endDate?: Date, current = false) {
   const options: Intl.DateTimeFormatOptions = {
     month: "short",
     year: "numeric",
   };
   const start = startDate.toLocaleDateString("en-US", options);
-  const end = endDate
+  const end = !current && endDate
     ? endDate.toLocaleDateString("en-US", options)
     : "Present";
   return `${start} - ${end}`;
@@ -80,7 +80,11 @@ const entriesWithContent = await Promise.all(
                 <time
                   class={`font-mono text-sm text-base-content/70 block italic ${index % 2 === 0 ? "md:text-end" : ""}`}
                 >
-                  {formatPeriod(entry.data.startDate, entry.data.endDate)}
+                  {formatPeriod(
+                    entry.data.startDate,
+                    entry.data.endDate,
+                    collection === "work" ? entry.data.current : false
+                  )}
                 </time>
                 <div class="card bg-base-100 shadow-xl mt-2 w-full">
                   <div class="card-body">
