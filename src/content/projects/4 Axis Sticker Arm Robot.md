@@ -1,6 +1,6 @@
 ---
 title: "4 Axis Sticker Delivery Arm"
-description: "Custom cycloidal gearbox designed for my robot dog, 20:1 reduction in a small form factor"
+description: "Custom 4 Axis Robot Arm designed for PTC Demos"
 image: "/images/projects/Sticker Arm/Main(16).png"
 startDate: "2026-06-01"
 order: 4
@@ -13,7 +13,7 @@ skills: ["CAD (Onshape)", "Mechanical Design", "Electronics", "Micropython", "3D
   <img src="/images/projects/Sticker Arm/Main(15).png" alt="kinematic" style="width:500px;max-width:100%;height:auto;display:inline-block;" />
 </div>
 
-During my time at PTC, I designed and built a 4 DOF sticker delivery robot. This demo went to events with the PTC education team, including to IMTS, the largest manufacturing trade show in America. This arm consisted of a coaxial belt drivea suction gripper, turreted base, and the ability to connect and be controlled by any device. 
+During my time at PTC, I designed and built a 4 DOF sticker delivery robot. This demo went to events with the PTC education team, including to IMTS, the largest manufacturing trade show in America. This arm consisted of a coaxial belt drive, a suction gripper, turreted base, and the ability to connect and be controlled by any device. 
 
 <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:12px;">
   <iframe
